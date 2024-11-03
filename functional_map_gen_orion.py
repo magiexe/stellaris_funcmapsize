@@ -194,7 +194,7 @@ for map_gen in map_gen_list:
 
 count = 5
 for galaxy in map_size_list:
-    add_max_emp = round(galaxy / 2)
+    add_max_emp = round(galaxy / 5)
     add_max_fall = round(galaxy / 10)
 
     kwargs = {}
@@ -249,9 +249,9 @@ for galaxy in map_size_list:
         open_max_b = 4
     elif galaxy >= 400 and galaxy < 500:
         open_max_b = 6
-    elif galaxy >= 500 and galaxy < 900:
+    elif galaxy >= 500 and galaxy < 850:
         open_max_b = 2
-    elif galaxy >= 1000:
+    elif galaxy >= 850:
         open_max_b = 4
     kwargs.update({"open_max_bridges": str(open_max_b)})
     kwargs.update({"num_nebulas": str(round(num_nebulas_factor["a"] * galaxy + num_nebulas_factor["b"]))})
